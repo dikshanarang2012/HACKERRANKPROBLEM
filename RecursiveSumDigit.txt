@@ -1,0 +1,20 @@
+
+package hackerrank;
+import java.util.*;
+class RecursiveSumDigit{
+public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+     String n1=sc.next(),n="";
+     int k=sc.nextInt();
+      for(int i=0;i<k;i++)
+          n+=n1;
+      while(n.length()!=1)
+      {
+          int k1=0;
+          for(int i=0;i<n.length();i++)
+              k1+=Integer.parseInt(n.charAt(i)+"");
+          n=Integer.toString(k1);       
+      }
+    System.out.println(n);
+    }
+}
