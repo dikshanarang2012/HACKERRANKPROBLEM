@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+
+public class Pair {
+
+    public static void main(String[] args) {
+       
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        int count=0;
+        long arr[]=new long[a];
+        for(int i=0;i<a;i++)
+            arr[i]=sc.nextLong();
+        Arrays.sort(arr);
+        int i=0,j=1;
+   
+    while(j < a) {
+        long diff = arr[j] - arr[i];
+       
+        if (diff == b) {
+            count++;
+            j++;
+        } else if (diff>b) {
+            i++;
+        } else if (diff<b) {
+            j++;
+        }
+    }
+        System.out.println(count);
+    }
+}
