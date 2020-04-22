@@ -1,0 +1,10 @@
+import java.util.Arrays;
+import java.util.List;
+
+public class Main {
+   public static void main(String[] args) {
+     List<Integer> numbers = Arrays.asList(2,4,5,10);
+     numbers.stream().filter(n -> n % 2 == 0).forEach(System.out::println);
+   }
+
+}
